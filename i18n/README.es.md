@@ -5,7 +5,7 @@
 
 # SpeakGPT
 
-> Asistente de IA de código abierto con enfoque Android que unifica chat, voz, visión y generación de imágenes.
+> Asistente de IA de código abierto, centrado en Android, con flujos de chat, voz, visión y generación de imágenes.
 
 [![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=flat-square&logo=android&logoColor=white)](#quick-facts)
 [![Min SDK](https://img.shields.io/badge/minSdk-28-2563EB?style=flat-square)](#prerequisites)
@@ -16,42 +16,54 @@
 [![AGP](https://img.shields.io/badge/AGP-8.12.2-34A853?style=flat-square&logo=android&logoColor=white)](#prerequisites)
 [![Google Play](https://img.shields.io/badge/Google%20Play-Install-0F9D58?style=flat-square&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=org.teslasoft.assistant)
 [![Web Companion](https://img.shields.io/badge/Web-assistant.teslasoft.org-0EA5E9?style=flat-square&logo=googlechrome&logoColor=white)](https://assistant.teslasoft.org/)
+[![Translations](https://img.shields.io/badge/Translations-11-2563EB?style=flat-square&logo=googletranslate&logoColor=white)](#table-of-contents)
+[![Contributions](https://img.shields.io/badge/Contributions-Welcome-10B981?style=flat-square&logo=github&logoColor=white)](#contributing)
+[![Support](https://img.shields.io/badge/Support-Open%20in%202%20clicks-EC4899?style=flat-square&logo=ko-fi&logoColor=white)](#-support)
 
-SpeakGPT es un asistente de IA avanzado e intuitivo de código abierto para Android. Integra proveedores modernos de modelos de lenguaje de gran escala (LLM) y flujos de trabajo multimodales (chat, voz, generación de imágenes, visión) en una sola app móvil.
+| ✅ Qué | 🔗 Enlace |
+|---|---|
+| Instalar app Android | [Google Play](https://play.google.com/store/apps/details?id=org.teslasoft.assistant) |
+| Usar web companion | [assistant.teslasoft.org](https://assistant.teslasoft.org/) |
+| Explorar incidencias | [GitHub Issues](https://github.com/AndraxDev/speak-gpt/issues) |
+| Ver traducciones | [i18n/](i18n/) |
 
-Oficialmente es compatible con modelos GPT, LLAMA, MIXTRAL, GEMMA, Gemini Vision (normal y pro), DALL-E y otros modelos.
+---
 
-## Quick facts
+SpeakGPT es un asistente de IA avanzado e intuitivo de código abierto para Android. Unifica varias experiencias de IA multimodal (chat, voz, generación de imágenes y visión) en una sola app con proveedores compatibles con OpenAI.
+
+De forma oficial admite modelos GPT, LLAMA, MIXTRAL, GEMMA, Gemini (Vision normal y pro), DALL-E y otras familias.
+
+## Hechos rápidos
 
 | Dato rápido | Detalles |
 |---|---|
 | 📱 Plataforma | Android (`minSdk 28`, `targetSdk 36`) |
-| 🧠 Uso principal | Trae-tu-propio-endpoint + trae-tu-propia-clave |
+| 🧠 Uso principal | Bring-your-own-endpoint + bring-your-own-key |
 | 🧩 Tipo de app | Cliente de IA de código abierto (no proveedor de API) |
-| 🌐 Web complementaria | [assistant.teslasoft.org](https://assistant.teslasoft.org/) |
+| 🌐 Web companion | [assistant.teslasoft.org](https://assistant.teslasoft.org/) |
 
 > [!NOTE]
 > 
-> Este proyecto forma parte de mi tesis de licenciatura. Se requiere atribución para usar este trabajo. Copyright (c) 2023-2025 Dmytro Ostapenko. Todos los derechos reservados.
+> Este proyecto forma parte de mi Tesis de Licenciatura. Se requiere atribución para usar este trabajo. Copyright (c) 2023-2025 Dmytro Ostapenko. Todos los derechos reservados.
 > 
 > Citar como: Dmytro Ostapenko (2024), "Review Program Automation Using Copilot Services" Bachelor Thesis, Technical University of Košice, 2024.
 
 > [!CAUTION]
 > 
-> Pronto dejaremos de dar soporte a estas versiones de Android: 9, 10 y 11. Esto está relacionado con cambios recientes en el SDK y la seguridad. Las versiones más antiguas de Android usan características obsoletas e inestables como RenderScript.
+> Se prevé retirar soporte de Android 9, 10 y 11 debido a cambios de SDK/seguridad. Las versiones antiguas de Android dependen de APIs obsoletas como RenderScript.
 
-## Contenido
+## Tabla de contenidos
 
 - [Descarga](#descarga)
 - [SpeakGPT Web](#speakgpt-web)
 - [Resumen](#resumen)
 - [Capturas de pantalla](#capturas-de-pantalla)
 - [Información para quienes quieran usar modelos Google Gemini con esta app](#información-para-quienes-quieran-usar-modelos-google-gemini-con-esta-app)
-- [Para quienes buscan una opción gratuita con poco o ningún esfuerzo](#para-quienes-buscan-una-opción-gratuita-con-poco-o-ningún-esfuerzo)
+- [Para quienes quieran algo gratuito con poco o ningún esfuerzo](#para-quienes-quieran-algo-gratuito-con-poco-o-ningún-esfuerzo)
 - [Proveedores de API compatibles](#proveedores-de-api-compatibles)
-- [Características principales](#características-principales)
+- [Características básicas](#características-básicas)
 - [Estructura del proyecto](#estructura-del-proyecto)
-- [Requisitos previos](#prerequisites)
+- [Requisitos previos](#requisitos-previos)
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Configuración](#configuración)
@@ -67,7 +79,7 @@ Oficialmente es compatible con modelos GPT, LLAMA, MIXTRAL, GEMMA, Gemini Vision
 
 ## Descarga
 
-📦 Instala desde Google Play:
+📦 Instálala desde Google Play:
 
 <a href="https://play.google.com/store/apps/details?id=org.teslasoft.assistant"><img src="play.webp" alt="Get it on Play" width="200"/></a>
 
@@ -79,23 +91,23 @@ Repositorio de GitHub: [https://github.com/AndraxDev/speak-gpt-web](https://gith
 
 ## Resumen
 
-SpeakGPT es un cliente para Android centrado en APIs de IA. Está diseñado con el enfoque BYOE y BYOK (trae tu propio endpoint y trae tu propia clave), para que elijas proveedor, modelo y perfil de coste/rendimiento.
+SpeakGPT está diseñado alrededor de un flujo de proveedores flexible para usuarios que quieren control directo sobre su stack de API.
 
-### En resumen
+### A grandes rasgos
 
 | Área | Resumen |
 |---|---|
-| 💬 Experiencias principales | Chat, generación de imágenes, reconocimiento de imágenes, entrada de voz, integraciones de asistente |
+| 💬 Experiencias principales | Chat, generación de imágenes, reconocimiento de imágenes, entrada de voz, integraciones con asistentes |
 | 🔌 Estrategia de proveedor | Endpoints compatibles con OpenAI con proveedores configurables y endpoints personalizados |
-| 🔐 Manejo de datos | Las claves API se guardan localmente; los chats pueden importarse o exportarse |
-| 🧱 Pila tecnológica | Proyecto Android multi-módulo con AGP `8.12.2`, Gradle `8.13` y Kotlin `2.2.10` |
+| 🔐 Gestión de datos | Las claves API se guardan localmente; las conversaciones pueden importarse/exportarse |
+| 🧱 Stack de compilación | Proyecto Android multi-módulo con AGP `8.12.2`, Gradle `8.13` y Kotlin `2.2.10` |
 
 Arquitectura del repositorio:
 
 - `app`: módulo de aplicación Android (`org.teslasoft.assistant`)
-- `teslasoft-id`: módulo de librería interna de Android para utilidades de autenticación/cliente (`org.teslasoft.core.auth`)
-- `ai_sets.json`, `explore.json`, `experiment.json` en la raíz, con metadatos para conjuntos de modelos, descubrimiento y flujos de importación/exportación
-- `i18n/`: directorio de salida multilingüe de README en el repositorio
+- `teslasoft-id`: módulo de librería interna para utilidades de autenticación/cliente (`org.teslasoft.core.auth`)
+- Metadatos JSON en la raíz del repositorio (`ai_sets.json`, `explore.json`, `experiment.json`) usados para conjuntos de modelos, descubrimiento y metadatos de workflows
+- `i18n/`: directorio de documentación multilingüe
 
 ## Capturas de pantalla
 
@@ -112,58 +124,60 @@ Arquitectura del repositorio:
 
 ## Información para quienes quieran usar modelos Google Gemini con esta app
 
-SpeakGPT no admite directamente claves API de Google, pero puedes usar Google Gemini a través de la API de OpenRouter.
+SpeakGPT no admite directamente claves API de Google, pero puedes usar Gemini a través de OpenRouter.
 
 Más información: [OpenRouter Models](https://openrouter.ai/docs#models)
 
-## Para quienes buscan una opción gratuita con poco o ningún esfuerzo
+## Para quienes quieran algo gratuito con poco o ningún esfuerzo
 
 > [!WARNING]
 > 
-> Recuerda: lo gratis suele venir con condiciones. ESTA APP ES UN CLIENTE DE CÓDIGO ABIERTO QUE SE OFRECE TAL CUAL. POR SÍ MISMA NO OFRECE ACCESO COMPLETAMENTE GRATUITO A LAS FUNCIONES PREMIUM DE LOS PROVEEDORES DE API (COMO MODELOS PRINCIPALES DE IA Y FUNCIONES ESPECIALES). SI HAS VENIDO AQUÍ PARA USAR EL TRABAJO DE OTROS DE FORMA GRATUITA SIN CRÉDITO, ES MEJOR QUE NO USES ESTA APP Y BUSQUES OTRA ALTERNATIVA. NO RESPONDERÉ A PREGUNTAS DEL TIPO "CLAVE API INCORRECTA, ¿POR QUÉ ESTA APP ME REDIRIGE A UN SITIO EXTERNO PARA OBTENER LA CLAVE API?". GRACIAS POR ENTENDER.
-> El resto de personas bien intencionadas son bienvenidas.
+> Las funciones gratuitas suelen tener restricciones. Esta app es de código abierto y se proporciona tal cual. No ofrece acceso premium gratuito a los servicios flagship de API de terceros.
+> 
+> Si esperas acceso premium totalmente gratuito, es más seguro usar otro producto. Preguntas como "clave API incorrecta" suelen resolverse comprobando tu endpoint y configuración de modelo. Gracias por entenderlo.
+>
+> Todos los demás usuarios legítimos son bienvenidos.
 
 ## Proveedores de API compatibles
 
 | Proveedor | Nivel de soporte | Notas |
 |---|---|---|
-| OpenAI | Soporte completo | Vía de integración principal |
+| OpenAI | Soporte total | Ruta principal de integración |
 | GROQ | Soporte parcial | Algunas funciones pueden variar |
-| Azure | Soporte parcial | Endpoint y modelo pueden variar según la implementación |
+| Azure | Soporte parcial | Los detalles de endpoint/modelo pueden diferir |
 | OpenRouter | Solo generación de texto | Probado con modelos Gemini, Claude, Perplexity, Llama, Gemma, Mistral, OpenAI |
-| Otros | Probados por la comunidad | Se agradece cualquier feedback |
+| Otro | Probado por la comunidad | Se agradecen comentarios |
 
 > [!NOTE]
 > 
-> Para cambiar de proveedor de API, ve a Ajustes y selecciona el endpoint. También puedes añadir tu propio proveedor API personalizado.
+> Para cambiar de proveedor, abre la configuración de la app y selecciona el endpoint de API. También puedes añadir un endpoint OpenAI-compatible personalizado.
 
-## Características principales
+## Características básicas
 
-✅ Funcionalidades implementadas:
+✅ Capacidades implementadas:
 
-- [x] Chat (guardado localmente, con opción de importar/exportar)
+- [x] Chat (guardado local, importación/exportación compatible)
 - [x] Generación de imágenes
-- [x] Reconocimiento de imágenes (usa tus imágenes y fotos con ChatGPT)
-- [x] Prompt de activación
-- [x] Mensaje del sistema
+- [x] Reconocimiento de imágenes (adjuntar imágenes/fotos en chat)
+- [x] Flujos de prompt de activación y mensajes de sistema
 - [x] Entrada de voz (Whisper y Google)
-- [x] Assistant
+- [x] Integración con asistentes
 - [x] SpeakGPT en menú contextual
-- [x] SpeakGPT en la hoja de compartir
-- [x] Llamadas a funciones
+- [x] SpeakGPT en hoja de compartir
+- [x] Funcionalidades de llamada a funciones
 - [x] Biblioteca de prompts
-- [x] Diseños de chat variados
+- [x] Múltiples diseños de chat
 - [x] Diseño adaptativo
-- [x] Varios modelos
+- [x] Cobertura amplia de modelos
 - [x] Sin captcha
-- [x] Sistema de pago por uso
-- [x] Consejos para principiantes
-- [x] Soporte para modelos personalizados fine-tuned
+- [x] Uso con pago por uso
+- [x] Consejos y guía de onboarding para nuevos usuarios
+- [x] Soporte para modelos ajustados/personalizados
 - [x] Modo oscuro AMOLED
-- [x] Soporte para proveedores API personalizados
-- [x] Ajustes de parámetros del modelo: `temperature`, `topP`, `frequencyPenalty`, `presencePenalty` y `logit_bias`
+- [x] Soporte de proveedor API personalizado
+- [x] Personalización de parámetros del modelo (`temperature`, `topP`, `frequencyPenalty`, `presencePenalty`, `logit_bias`)
 - [x] Playground
-- [x] Acceso a modelos destacados más nuevos como o1, o3, o4, gpt-4.1, gpt-4.5 y gpt-image-1 (algunos pueden requerir verificación de identidad en OpenAI)
+- [x] Acceso a familias insignia recientes como o1, o3, o4, gpt-4.1, gpt-4.5, gpt-image-1
 
 ## Estructura del proyecto
 
@@ -197,48 +211,52 @@ speak-gpt/
 └── i18n/
 ```
 
-## Prerequisites
+## Requisitos previos
 
 - Android Studio (se recomienda la versión estable actual)
 - Android SDK con `compileSdk 36`
-- JDK 21 (la compatibilidad source/target del proyecto es Java 21)
+- JDK 21 (`sourceCompatibility`/`targetCompatibility` alineados con Java 21 en la configuración del proyecto)
 - Git
-- Acceso a internet para resolución de dependencias y APIs de proveedores de modelos
+- Acceso a Internet para dependencias de Gradle y APIs de proveedores
 
-Datos del sistema de compilación del repositorio:
+Datos del sistema de compilación desde la configuración del repositorio:
 
 | Componente | Versión / Valor |
 |---|---|
 | Android Gradle Plugin | `8.12.2` |
 | Plugin de Kotlin | `2.2.10` |
-| Gradle wrapper | `8.13` |
-| Package ID de la app | `org.teslasoft.assistant` |
+| Wrapper de Gradle | `8.13` |
+| ID de paquete de la app | `org.teslasoft.assistant` |
 | Min SDK | `28` |
 | Target SDK | `36` |
 
 ## Instalación
 
-### 1. Clonar el repositorio
+### 1. Clonar repositorio
 
 ```bash
-
 git clone https://github.com/AndraxDev/speak-gpt.git
 cd speak-gpt
 ```
 
-### 2. Compilar APK de depuración
+### 2. Abrir en Android Studio
+
+- Abre `build.gradle` desde Android Studio.
+- Espera a que termine la sincronización de Gradle.
+
+### 3. Compilar APK de depuración
 
 ```bash
 ./gradlew assembleDebug
 ```
 
-### 3. Instalar en un dispositivo o emulador conectado
+### 4. Instalar en un dispositivo/emulador conectado
 
 ```bash
 ./gradlew installDebug
 ```
 
-### 4. Comprobaciones de calidad opcionales
+### 5. Verificación de calidad opcional
 
 ```bash
 ./gradlew lint
@@ -246,18 +264,18 @@ cd speak-gpt
 
 ## Uso
 
-### Flujo para usuarios finales (en la app)
+### Flujo del usuario final (en la app)
 
-1. Instala la app desde Google Play o desde un build de debug local.
+1. Instala la app desde Google Play o una build de depuración local.
 2. Completa el flujo de onboarding.
-3. Abre la configuración de API y selecciona o añade tu endpoint/proveedor.
-4. Introduce la clave API (se guarda localmente en tu dispositivo).
-5. Elige el modelo y empieza chat, visión, generación de imágenes o flujos de voz.
+3. Abre la configuración de API y selecciona un proveedor/endpoint.
+4. Añade una clave API válida (se almacena localmente en el dispositivo).
+5. Selecciona un modelo y empieza con chat, visión, generación de imágenes o voz.
 
 ### Integraciones disponibles en Android
 
-- Integración del asistente (`ASSIST` intent)
-- Integración con hoja de compartir (`SEND` y `SEND_MULTIPLE` intents)
+- Integración con asistente (`ASSIST` intent)
+- Integración en hoja de compartir (`SEND`, `SEND_MULTIPLE` intents)
 - Integración de procesamiento de texto (`PROCESS_TEXT`)
 - Enlaces profundos para `assistant.teslasoft.org` (`/chat`, `/prompts`, `/assistant`)
 
@@ -266,12 +284,12 @@ cd speak-gpt
 ### Endpoints y proveedores de API
 
 - Abre **Settings** en la app.
-- Selecciona **API endpoint** para cambiar entre proveedores preconfigurados.
+- Elige **API endpoint** para cambiar entre proveedores integrados.
 - Añade un endpoint personalizado si tu proveedor es compatible con OpenAI.
 
-### Modelo y parámetros de generación
+### Parámetros de modelo y generación
 
-SpeakGPT permite ajustar en tiempo de ejecución parámetros como:
+SpeakGPT permite ajustar en tiempo de ejecución:
 
 - `temperature`
 - `topP`
@@ -282,86 +300,95 @@ SpeakGPT permite ajustar en tiempo de ejecución parámetros como:
 ### Datos locales y seguridad
 
 - Las conversaciones se guardan localmente y pueden importarse/exportarse.
-- Valores sensibles, como claves API, se manejan con preferencias cifradas.
+- Valores sensibles como las claves API se manejan mediante preferencias cifradas.
 
 ### Notas y supuestos
 
-- `google-services.json` está presente en este repositorio; si haces un fork y lo quitas, algunas integraciones podrían requerir tu propia configuración.
-- La compatibilidad con proveedores puede variar según la implementación del endpoint y la familia de modelos.
+- `google-services.json` existe en este repositorio para builds actuales; si se elimina en forks, algunas integraciones pueden requerir una configuración equivalente de Firebase/App services.
+- El comportamiento del proveedor puede variar según el endpoint y la familia del modelo.
 
 ## Ejemplos
 
-### Ejemplo 1: Construir APK de release
+### Compilar APK de release
 
 ```bash
 ./gradlew assembleRelease
 ```
 
-### Ejemplo 2: Reconstrucción limpia
+### Reconstrucción limpia
 
 ```bash
 ./gradlew clean assembleDebug
 ```
 
-### Ejemplo 3: Usar OpenRouter para modelos de la familia Gemini
+### Usar OpenRouter para modelos de la familia Gemini
 
 1. Crea una clave API de OpenRouter.
-2. En la configuración de SpeakGPT, selecciona o añade el endpoint de OpenRouter.
-3. Elige un modelo de OpenRouter compatible con Gemini.
-4. Inicia un chat y verifica la generación de respuestas.
+2. En configuración de SpeakGPT, selecciona/añade el endpoint de OpenRouter.
+3. Elige un modelo compatible con Gemini.
+4. Inicia un chat y verifica las respuestas.
+
+### Ejecutar compilación limpia completa
+
+```bash
+./gradlew clean build
+```
 
 ## Notas de desarrollo
 
-- Este es un proyecto Android modular (`:app`, `:teslasoft-id`).
-- Los tipos de build `debug` y `release` tienen `minifyEnabled true` y `shrinkResources true` en la configuración actual.
+- Este es un proyecto Android multi-módulo (`:app`, `:teslasoft-id`).
+- Los tipos de compilación `debug` y `release` usan `minifyEnabled true` y `shrinkResources true` en la configuración actual.
 - Las reglas ProGuard/R8 están en:
   - `app/proguard-rules.pro`
   - `teslasoft-id/proguard-rules.pro`
-- La documentación web embebida está en:
+- La documentación web integrada está ubicada en:
   - `app/src/main/assets/www/api.html`
   - `app/src/main/assets/www/api_light.html`
   - `app/src/main/assets/www/privacy.html`
   - `app/src/main/assets/www/privacy_light.html`
 - Los recursos de localización están en `app/src/main/res/values-*`.
-- La carpeta de salida i18n del README está en `i18n/` (los README por idioma se generan en pasos separados del pipeline).
+- Las traducciones del README están en `i18n/` para variantes de idioma.
 
 ## Solución de problemas
 
-| Problema | Qué comprobar |
+| Incidencia | Qué revisar |
 |---|---|
-| "Clave API incorrecta" o errores de autenticación | Verifica que la clave sea válida para el proveedor elegido, que el modelo seleccionado esté disponible en tu cuenta y si el proveedor exige verificación adicional para modelos insignia. |
-| Desajuste de endpoint/modelo | Si usas un endpoint de proveedor personalizado, asegura el formato de solicitud/respuesta compatible con OpenAI. Prueba cambiar la configuración del endpoint y volver a probar. |
-| Problemas de compilación | Comprueba que JDK 21 esté activo, sincroniza el proyecto en Android Studio, ejecuta `./gradlew --version` y verifica que el wrapper use Gradle `8.13`, luego reintenta con `./gradlew clean build`. |
-| Problemas en Android antiguos | El proyecto soporta actualmente `minSdk 28` (Android 9). Se advierte que en el futuro podría dejarse de soportar Android 9/10/11 debido a cambios de SDK y seguridad. |
+| Clave API incorrecta / fallo de autenticación | Comprueba que la clave sea válida, la compatibilidad del proveedor y la disponibilidad del modelo. Algunos modelos flagship requieren verificación extra de cuenta. |
+| Desajuste de endpoint o modelo | Valida que tu endpoint personalizado siga formatos OpenAI-compatible de solicitud/respuesta. Prueba cambiar el preset de endpoint en Ajustes y vuelve a intentarlo. |
+| Errores de compilación | Confirma que JDK 21 esté activo, sincroniza Gradle y verifica que Gradle wrapper sea `8.13` con `./gradlew --version`, luego ejecuta `./gradlew clean build`. |
+| Errores en tiempo de ejecución en Android legacy | El proyecto está en `minSdk 28`. Se esperan advertencias de deprecación para Android 9/10/11 por evolución de la política de soporte. |
 
 ## Hoja de ruta
 
-### ❌ Pendiente de añadir (comparte tus ideas en Issues)
+### ❌ Funcionalidades previstas
 
-- [ ] Rutinas de dispositivo (como configurar alarma o abrir apps)
-- [ ] Sincronización del historial de chat
-- [ ] Añadir un portal de intercambio de modelos tipo tienda de prompts
-- [ ] Capacidades de navegación oficial (permitir que modelos GPT AI accedan a internet)
+- [ ] Rutinas del dispositivo (configurar alarma o abrir app)
+- [ ] Sincronizar historial de chat
+- [ ] Portal de intercambio de prompts / flujo estilo marketplace
+- [ ] Navegación oficial/herramientas para workflows con acceso a internet
 
 ## Seguridad de clave API
 
-SpeakGPT usa la API de OpenAI para darte la mejor experiencia posible. Usar claves API es más seguro que usar usuario y contraseña. Tu información personal no se puede obtener usando una clave API. OpenAI ofrece acceso API económico a sus servicios. Tu clave API se guarda localmente en tu dispositivo y no se comparte con nadie. SpeakGPT no recoge datos personales. SpeakGPT es de código abierto y puedes revisar el código por ti mismo. Cada versión de SpeakGPT se comprueba en VirusTotal.
-Si tienes alguna duda, puedes [revocar tu clave API](https://platform.openai.com/account/api-keys) o usar una clave API separada para SpeakGPT.
+SpeakGPT usa claves API para solicitar a proveedores, por lo que las credenciales están acotadas y son más seguras que los flujos de cuenta/contraseña.
 
-Para proteger tu clave API realiza estos pasos:
+- Tu clave API se almacena localmente y no se comparte por la app.
+- Puedes revocar las claves desde tu consola del proveedor en cualquier momento.
+- Si quieres, usa una clave dedicada para SpeakGPT.
 
-1. Ten una clave API separada para SpeakGPT.
-2. Configura un límite de facturación.
-3. Activa el seguimiento de uso para ver cuánto recurso usa SpeakGPT y su coste.
-4. Si tienes dudas, revoca tu clave API.
+Recordatorios de seguridad:
 
-> ¿Por qué ofuscamos el código en versiones de producción?
-> 
-> La ofuscación y reducción de recursos nos permite optimizar tamaño y rendimiento, y protegerlo frente a ingeniería inversa o manipulación, además de mantener tus credenciales en un sitio seguro. Puedes solicitar una build sin ofuscación o compilarla tú mismo para comprobar la seguridad de la app.
+1. Mantén una clave API separada para SpeakGPT.
+2. Configura límites de facturación.
+3. Activa el monitoreo de uso para controlar costos.
+4. Revoca las claves cuando detectes uso sospechoso.
+
+Por qué las releases están ofuscadas:
+
+La ofuscación y reducción de recursos mejoran el tamaño del paquete, el rendimiento y reducen riesgo de ingeniería inversa en torno al manejo de credenciales. Puedes pedir una build sin ofuscar o compilarla tú mismo.
 
 > [!CAUTION]
 > 
-> ¡CUIDADO CON EL MALWARE! Puedes compilar y modificar SpeakGPT, pero ten cuidado si alguien externo te propone instalar su build. Esa build podría contener malware. Las builds oficiales no incluyen malware y son verificadas con más de 60 antivirus distintos a través de VirusTotal. Puedes encontrar el informe de VirusTotal en cada página de release y comparar el hash de los binarios.
+> No instales builds de fuentes no confiables. Builds de terceros pueden modificarse e introducir malware. Las builds oficiales se verifican con VirusTotal y se publican por canales oficiales.
 
 ## Identidad del desarrollador
 
@@ -369,42 +396,24 @@ Para proteger tu clave API realiza estos pasos:
 |---|---|
 | Nombre del desarrollador | Dmytro Ostapenko (AndraxDev) |
 | Contacto | dostapenko82@gmail.com, +421951829517 |
-| Dirección legal | Južná trieda 4B, 04001 Košice, Slovakia 04001 |
-| ID de entidad legal | 55545386 (D-U-N-S: 933739642) |
-| Licencia de actividad comercial | OU-KE-OZP1-2023/031005-2 (Emitida el 14 de junio de 2023 según § 10 sección 1 letra a) de la Ley No. 455/1991 Coll. sobre licencia comercial (Trade Licensing Act) tras sus enmiendas) |
+| Dirección legal | Južná trieda 4B, 04001 Košice, Slovakia |
+| ID legal de entidad | 55545386 (D-U-N-S: 933739642) |
+| Licencia de actividad comercial | OU-KE-OZP1-2023/031005-2 (Emitida el 14 de junio de 2023 según el § 10(1)(a) de la Ley Nº 455/1991 Coll. on Trade Licensing, enmendada) |
 | VAT ID | SK3121636045 |
 
-(Para que sepas a dónde llegará tu aportación si decides apoyar el proyecto económicamente o si en el futuro incorpora funciones de pago.)
+(Si quieres saber dónde va tu dinero al apoyar económicamente el proyecto o si en el futuro aparecen funciones de pago.)
 
 ## Contribuir
 
 Las contribuciones son bienvenidas.
 
-- Reporta bugs en Issues indicando pasos de reproducción.
-- Solicita nuevas funciones (usa etiquetas claras en los issues).
-- Si envías código, mantén los cambios acotados e incluye justificación.
-
-## ❤️ Support
-
-| Donate | PayPal | Stripe |
-|---|---|---|
-| [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=ko-fi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
-
-### Agradecimientos
-
-- Reporta errores
-- Bríndame apoyo :)
-- Solicita nuevas funciones. No olvides marcar el issue con una etiqueta
-
-### Invítame un café
-
-<a href="https://buymeacoffee.com/andrax_dev"><img src="https://andrax.dev/bmc_qr.png" width="200"/></a>
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S6X3NCE)
+- Informa errores en Issues con pasos de reproducción.
+- Propón nuevas funciones con título y contexto claros.
+- Mantén los PRs acotados e incluye justificación y notas de pruebas.
 
 ## Licencia
 
-Este proyecto está bajo la licencia Apache License 2.0. Consulta [LICENSE.md](LICENSE.md).
+Este proyecto está licenciado bajo Apache License 2.0. Consulta [LICENSE.md](LICENSE.md).
 
 ```text
 Copyright (c) 2023-2025 Dmytro Ostapenko. All rights reserved.
@@ -421,3 +430,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+
+
+## ❤️ Support
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://camo.githubusercontent.com/24a4914f0b42c6f435f9e101621f1e52535b02c225764b2f6cc99416926004b7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d4c617a79696e674172742d3045413545393f7374796c653d666f722d7468652d6261646765266c6f676f3d6b6f2d6669266c6f676f436f6c6f723d7768697465)](https://chat.lazying.art/donate) | [![PayPal](https://camo.githubusercontent.com/d0f57e8b016517a4b06961b24d0ca87d62fdba16e18bbdb6aba28e978dc0ea21/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617950616c2d526f6e677a686f754368656e2d3030343537433f7374796c653d666f722d7468652d6261646765266c6f676f3d70617970616c266c6f676f436f6c6f723d7768697465)](https://paypal.me/RongzhouChen) | [![Stripe](https://camo.githubusercontent.com/1152dfe04b6943afe3a8d2953676749603fb9f95e24088c92c97a01a897b4942/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374726970652d446f6e6174652d3633354246463f7374796c653d666f722d7468652d6261646765266c6f676f3d737472697065266c6f676f436f6c6f723d7768697465)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
