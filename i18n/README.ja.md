@@ -1,38 +1,44 @@
 [English](../README.md) · [العربية](README.ar.md) · [Español](README.es.md) · [Français](README.fr.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Tiếng Việt](README.vi.md) · [中文 (简体)](README.zh-Hans.md) · [中文（繁體）](README.zh-Hant.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
 
+[![LazyingArt banner](https://github.com/lachlanchen/lachlanchen/raw/main/figs/banner.png)](https://github.com/lachlanchen/lachlanchen/blob/main/figs/banner.png)
+
 # SpeakGPT
 
-![Platform](https://img.shields.io/badge/platform-Android-brightgreen)
-![Min SDK](https://img.shields.io/badge/minSdk-28-blue)
-![Target SDK](https://img.shields.io/badge/targetSdk-36-blue)
-![License](https://img.shields.io/badge/license-Apache--2.0-orange)
-![Gradle](https://img.shields.io/badge/gradle-8.13-02303A?logo=gradle&logoColor=white)
-![Kotlin](https://img.shields.io/badge/kotlin-2.2.10-7F52FF?logo=kotlin&logoColor=white)
-![AGP](https://img.shields.io/badge/AGP-8.12.2-3DDC84?logo=android&logoColor=white)
+> Android を第一にした、チャット、音声、画像認識、画像生成ワークフローを備えたオープンソース AI アシスタントです。
 
-<img src="https://assistant.teslasoft.org/SPEAKGPT_BANNER_ANDROID.png" style="width: 100%;"/>
+[![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=flat-square&logo=android&logoColor=white)](#quick-facts)
+[![Min SDK](https://img.shields.io/badge/minSdk-28-2563EB?style=flat-square)](#prerequisites)
+[![Target SDK](https://img.shields.io/badge/targetSdk-36-2563EB?style=flat-square)](#prerequisites)
+[![License](https://img.shields.io/badge/License-Apache%202.0-F59E0B?style=flat-square)](#license)
+[![Gradle](https://img.shields.io/badge/Gradle-8.13-02303A?style=flat-square&logo=gradle&logoColor=white)](#prerequisites)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.2.10-7F52FF?style=flat-square&logo=kotlin&logoColor=white)](#prerequisites)
+[![AGP](https://img.shields.io/badge/AGP-8.12.2-34A853?style=flat-square&logo=android&logoColor=white)](#prerequisites)
+[![Google Play](https://img.shields.io/badge/Google%20Play-Install-0F9D58?style=flat-square&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=org.teslasoft.assistant)
+[![Web Companion](https://img.shields.io/badge/Web-assistant.teslasoft.org-0EA5E9?style=flat-square&logo=googlechrome&logoColor=white)](https://assistant.teslasoft.org/)
 
-SpeakGPT は、Android 向けの高度で直感的なオープンソース AI アシスタントです。最新の大規模言語モデル（LLM）プロバイダーとマルチモーダルなワークフロー（チャット、音声、画像生成、画像認識）を 1 つのモバイルアプリに統合しています。
+SpeakGPT は、Android 向けの高度で直感的なオープンソース AI アシスタントです。最新の大規模言語モデル（LLM）プロバイダーと、チャット、音声、画像生成、ビジョン機能などのマルチモーダルワークフローを 1 つのモバイルアプリに統合しています。
 
-公式には、GPT モデル、LLAMA、MIXTRAL、GEMMA、Gemini（通常版および Pro）Vision、DALL-E などのモデルをサポートしています。
+公式には、GPT モデル、LLAMA、MIXTRAL、GEMMA、Gemini（通常版と Pro 版）の Vision、DALL-E、ほかのモデルをサポートしています。
 
-| クイック情報 | 詳細 |
+## Quick facts
+
+| Quick facts | Details |
 |---|---|
-| 📱 プラットフォーム | Android（`minSdk 28`, `targetSdk 36`） |
-| 🧠 主な利用形態 | エンドポイント持ち込み + API キー持ち込み |
-| 🧩 アプリ種別 | オープンソース AI クライアント（API プロバイダーではありません） |
-| 🌐 Web 版 | [assistant.teslasoft.org](https://assistant.teslasoft.org/) |
+| 📱 Platform | Android (`minSdk 28`, `targetSdk 36`) |
+| 🧠 Core usage | Bring-your-own-endpoint + bring-your-own-key |
+| 🧩 App type | Open-source AI client (not an API provider) |
+| 🌐 Web companion | [assistant.teslasoft.org](https://assistant.teslasoft.org/) |
 
 > [!NOTE]
 >
-> このプロジェクトは私の学士論文の一部です。この成果物を利用する場合は帰属表示が必要です。Copyright (c) 2023-2025 Dmytro Ostapenko. All rights reserved.
+> This project is a part of my Bachelor Thesis. Attribution is required to use this work. Copyright (c) 2023-2025 Dmytro Ostapenko. All rights reserved.
 >
-> 引用形式: Dmytro Ostapenko (2024), "Review Program Automation Using Copilot Services" Bachelor Thesis, Technical University of Košice, 2024.
+> Cite as: Dmytro Ostapenko (2024), "Review Program Automation Using Copilot Services" Bachelor Thesis, Technical University of Košice, 2024.
 
 > [!CAUTION]
 >
-> 次の Android バージョンのサポートは近日中に終了予定です: 9, 10, 11。これは SDK およびセキュリティの最近の変更に関連しています。古い Android バージョンでは RenderScript などの非推奨かつ不安定な機能が使われています。
+> 以下の Android バージョンのサポートはまもなく終了します: 9, 10, 11。これは SDK とセキュリティの最近の変更に関連しています。古い Android では RenderScript などの非推奨で不安定な機能が使われています。
 
 ## 目次
 
@@ -41,23 +47,22 @@ SpeakGPT は、Android 向けの高度で直感的なオープンソース AI �
 - [概要](#概要)
 - [スクリーンショット](#スクリーンショット)
 - [このアプリで Google Gemini モデルを使いたいユーザー向け情報](#このアプリで-google-gemini-モデルを使いたいユーザー向け情報)
-- [ほとんど手間をかけずに無料で使いたい方へ](#ほとんど手間をかけずに無料で使いたい方へ)
+- [手間をかけずに無料で使いたい方向け](#手間をかけずに無料で使いたい方向け)
 - [対応 API プロバイダー](#対応-api-プロバイダー)
 - [基本機能](#基本機能)
-- [プロジェクト構成](#プロジェクト構成)
+- [プロジェクト構造](#プロジェクト構造)
 - [前提条件](#前提条件)
 - [インストール](#インストール)
-- [使い方](#使い方)
+- [利用方法](#利用方法)
 - [設定](#設定)
-- [使用例](#使用例)
+- [利用例](#利用例)
 - [開発メモ](#開発メモ)
 - [トラブルシューティング](#トラブルシューティング)
 - [ロードマップ](#ロードマップ)
 - [API キーの安全性](#api-キーの安全性)
 - [開発者情報](#開発者情報)
 - [コントリビュート](#コントリビュート)
-- [サポート](#サポート)
-- [Buy me a coffee](#buy-me-a-coffee)
+- [❤️ Support](#-support)
 - [ライセンス](#ライセンス)
 
 ## ダウンロード
@@ -68,20 +73,29 @@ SpeakGPT は、Android 向けの高度で直感的なオープンソース AI �
 
 ## SpeakGPT Web
 
-🌍 SpeakGPT Web を開く: [https://assistant.teslasoft.org/](https://assistant.teslasoft.org/)
+🌍 SpeakGPT Web を起動: [https://assistant.teslasoft.org/](https://assistant.teslasoft.org/)
 
 GitHub リポジトリ: [https://github.com/AndraxDev/speak-gpt-web](https://github.com/AndraxDev/speak-gpt-web)
 
 ## 概要
 
-SpeakGPT は AI API 向けの Android ファーストなクライアントです。エンドポイント持ち込み・キー持ち込みを前提に設計されており、ユーザーがプロバイダー、モデル、コスト/性能プロファイルを選べます。
+SpeakGPT は、AI API 向けの Android ファーストクライアントです。Bring-your-own-endpoint と Bring-your-own-key を前提に設計されており、ユーザーはプロバイダー、モデル、コスト/性能プロファイルを選択できます。
 
-リポジトリアーキテクチャ:
+### サマリー
+
+| 項目 | 概要 |
+|---|---|
+| 💬 コア体験 | チャット、画像生成、画像認識、音声入力、アシスタント連携 |
+| 🔌 プロバイダー戦略 | OpenAI 互換のエンドポイント。プロバイダーと独自エンドポイントを設定可能 |
+| 🔐 データ処理 | API キーは端末内に保存。会話はインポート/エクスポート可能 |
+| 🧱 ビルドスタック | AGP `8.12.2`、Gradle `8.13`、Kotlin `2.2.10` を使う Android マルチモジュール構成 |
+
+リポジトリ構成:
 
 - `app`: Android アプリケーションモジュール（`org.teslasoft.assistant`）
-- `teslasoft-id`: 認証/クライアントユーティリティ用の内部 Android ライブラリモジュール（`org.teslasoft.core.auth`）
-- リポジトリルートの JSON メタデータ（`ai_sets.json`, `explore.json`, `experiment.json`）は、モデルセット、探索、インポート/エクスポート系ワークフローに利用
-- `i18n/`: 多言語 README の出力ディレクトリ（このリポジトリに存在）
+- `teslasoft-id`: 認証/クライアントユーティリティ向けの内部 Android ライブラリモジュール（`org.teslasoft.core.auth`）
+- リポジトリルートにある JSON メタデータ（`ai_sets.json`、`explore.json`、`experiment.json`）はモデルセット、探索、インポート/エクスポート型ワークフローに使用
+- `i18n/`: 多言語 README 出力ディレクトリ（リポジトリ内に存在）
 
 ## スクリーンショット
 
@@ -98,60 +112,61 @@ SpeakGPT は AI API 向けの Android ファーストなクライアントです
 
 ## このアプリで Google Gemini モデルを使いたいユーザー向け情報
 
-SpeakGPT 自体は Google API キーをサポートしていませんが、OpenRouter API を使うことで Google Gemini を利用できます。
+SpeakGPT 自体は Google API キーをサポートしていませんが、OpenRouter API を利用すれば Google Gemini を使うことができます。
 
 詳細: [OpenRouter Models](https://openrouter.ai/docs#models)
 
-## ほとんど手間をかけずに無料で使いたい方へ
+## 手間をかけずに無料で使いたい方向け
 
 > [!WARNING]
 >
-> 無料のうまい話には必ず注意してください。THIS APP IS OPEN-SOURCE CLIENT PROVIDED AS IS. ITSELF IT DOES NOT PROVIDE COMPLETELY FREE ACCESS TO THE PREMIUM FEATURES OF API PROVIDERS (LIKE FLAGSHIP AI MODELS AND SPECIAL FEATURES). IF YOU COME HERE TO USE OTHER'S WORK FOR FREE AND WITHOUT A CREDIT, IT'S BETTER YOU SKIP THIS APP AND LOOK FOR SOMETHING ELSE. I WILL NOT RESPOND TO YOUR "INCORRECT API KEY, WHY THIS APP REDIRECTS ME TO THE EXTERNAL SITE FOR API KEY?" QUESTIONS. THANK YOU FOR UNDERSTANDING.
-> 常識的に利用してくださる方は歓迎します。
+> 無料には落とし穴があることを忘れないでください。THIS APP IS OPEN-SOURCE CLIENT PROVIDED AS IS. ITSELF IT DOES NOT PROVIDE COMPLETELY FREE ACCESS TO THE PREMIUM FEATURES OF API PROVIDERS (LIKE FLAGSHIP AI MODELS AND SPECIAL FEATURES). IF YOU COME HERE TO USE OTHER'S WORK FOR FREE AND WITHOUT A CREDIT, IT'S BETTER YOU SKIP THIS APP AND LOOK FOR SOMETHING ELSE. I WILL NOT RESPOND TO YOUR "INCORRECT API KEY, WHY THIS APP REDIRECTS ME TO THE EXTERNAL SITE FOR API KEY?" QUESTIONS. THANK YOU FOR UNDERSTANDING.
+> 常識的に使う人向けの内容です。  
+> 無駄な期待をせず、適切な利用規約の範囲内で使ってください。
 
 ## 対応 API プロバイダー
 
-| プロバイダー | 対応レベル | 注記 |
+| Provider | Support level | Notes |
 |---|---|---|
-| OpenAI | フルサポート | 主要な統合先 |
-| GROQ | 部分サポート | 一部機能に差異がある場合があります |
-| Azure | 部分サポート | エンドポイント/モデル固有の差異がある場合があります |
-| OpenRouter | テキスト生成のみ | Gemini、Claude、Perplexity、Llama、Gemma、Mistral、OpenAI モデルで検証済み |
-| Other | コミュニティ検証 | フィードバック歓迎 |
+| OpenAI | Full support | Primary integration path |
+| GROQ | Partial support | Some features may vary |
+| Azure | Partial support | Endpoint/model specifics may differ |
+| OpenRouter | Text generation only | Tested with Gemini, Claude, Perplexity, Llama, Gemma, Mistral, OpenAI models |
+| Other | Community-tested | Feedback is welcome |
 
 > [!NOTE]
 >
-> API プロバイダーを変更するには、設定に移動して API エンドポイントを選択してください。カスタム API プロバイダーを追加することもできます。
+> API プロバイダーを変更するには、設定から API エンドポイントを選択します。独自 API プロバイダーも追加できます。
 
 ## 基本機能
 
-✅ 実装済み機能:
+✅ 実装済み:
 
-- [x] チャット（ローカル保存、必要に応じてインポート/エクスポート可能）
+- [x] チャット（ローカル保存。必要に応じてインポート/エクスポート可能）
 - [x] 画像生成
-- [x] 画像認識（画像や写真を ChatGPT と一緒に利用）
+- [x] 画像認識（画像や写真を ChatGPT で使用）
 - [x] Activation prompt
 - [x] System message
-- [x] 音声入力（Whisper および Google）
+- [x] 音声入力（Whisper と Google）
 - [x] Assistant
-- [x] コンテキストメニューでの SpeakGPT
-- [x] Share シートでの SpeakGPT
+- [x] コンテキストメニュー内の SpeakGPT
+- [x] 共有シート内の SpeakGPT
 - [x] Function calling features
 - [x] Prompts Library
-- [x] 異なるチャットレイアウト
-- [x] アダプティブデザイン
+- [x] 複数のチャットレイアウト
+- [x] 適応型デザイン
 - [x] 多数のモデル
-- [x] CAPTCHA なし
+- [x] キャプチャなし
 - [x] 従量課金システム
-- [x] 初心者向けヒント
-- [x] カスタム微調整モデルをサポート
+- [x] 初心者向けチュートリアル
+- [x] カスタムファインチューニングモデル対応
 - [x] AMOLED ダークモード
 - [x] カスタム API プロバイダー対応
-- [x] `temperature`, `topP`, `frequencyPenalty`, `presencePenalty`, `logit_bias` などのモデルパラメータをカスタマイズ可能
+- [x] `temperature`、`topP`、`frequencyPenalty`、`presencePenalty`、`logit_bias` などのモデルパラメータをカスタマイズ
 - [x] Playground
-- [x] o1、o3、o4、gpt-4.1、gpt-4.5、gpt-image-1 など最新フラッグシップモデルへのアクセス（これらの一部は OpenAI で本人確認が必要な場合があります）
+- [x] o1、o3、o4、gpt-4.1、gpt-4.5、gpt-image-1 など最新フラッグシップモデルへのアクセス（これらのモデルは OpenAI の本人確認が必要な場合があります）
 
-## プロジェクト構成
+## プロジェクト構造
 
 ```text
 speak-gpt/
@@ -186,14 +201,14 @@ speak-gpt/
 ## 前提条件
 
 - Android Studio（最新安定版推奨）
-- `compileSdk 36` を含む Android SDK
-- JDK 21（プロジェクトの source/target 互換は Java 21）
+- Android SDK（`compileSdk 36`）
+- JDK 21（プロジェクトの source/target 互換性は Java 21）
 - Git
-- 依存関係解決およびモデルプロバイダー API 用のインターネット接続
+- 依存関係の解決とモデル API 利用のためのインターネット接続
 
-リポジトリ設定に基づくビルド情報:
+Build system facts from repo configuration:
 
-| コンポーネント | バージョン / 値 |
+| Component | Version / Value |
 |---|---|
 | Android Gradle Plugin | `8.12.2` |
 | Kotlin plugin | `2.2.10` |
@@ -217,7 +232,7 @@ cd speak-gpt
 ./gradlew assembleDebug
 ```
 
-### 3. 接続済みデバイス/エミュレーターにインストール
+### 3. 接続済みデバイスまたはエミュレーターへインストール
 
 ```bash
 ./gradlew installDebug
@@ -229,34 +244,34 @@ cd speak-gpt
 ./gradlew lint
 ```
 
-## 使い方
+## 利用方法
 
-### エンドユーザーフロー（アプリ内）
+### エンドユーザーの流れ（アプリ内）
 
 1. Google Play またはローカルのデバッグビルドからアプリをインストールします。
 2. オンボーディングを完了します。
-3. API 設定を開き、エンドポイント/プロバイダーを選択または追加します。
-4. API キーを入力します（キーは端末内にローカル保存されます）。
-5. モデルを選び、チャット、画像認識、画像生成、音声ワークフローを開始します。
+3. API 設定を開いて、エンドポイント/プロバイダーを選択または追加します。
+4. API キーを入力します（キーは端末にローカル保存されます）。
+5. モデルを選んでチャット、ビジョン、画像生成、音声ワークフローを開始します。
 
 ### 利用可能な Android 連携
 
 - Assistant 連携（`ASSIST` intent）
-- Share シート連携（`SEND` および `SEND_MULTIPLE` intents）
+- 共有シート連携（`SEND` と `SEND_MULTIPLE` intent）
 - Process text 連携（`PROCESS_TEXT`）
-- `assistant.teslasoft.org` 向けディープリンク（`/chat`, `/prompts`, `/assistant`）
+- `assistant.teslasoft.org` のディープリンク (`/chat`, `/prompts`, `/assistant`)
 
 ## 設定
 
 ### API エンドポイントとプロバイダー
 
 - アプリの **Settings** を開きます。
-- **API endpoint** を選択して、事前設定済みプロバイダーを切り替えます。
-- プロバイダーが OpenAI 互換であれば、カスタムエンドポイントを追加できます。
+- **API endpoint** を選択し、事前設定済みプロバイダーを切り替えます。
+- 選択したプロバイダーが OpenAI 互換なら、独自エンドポイントを追加できます。
 
 ### モデルと生成パラメータ
 
-SpeakGPT は、以下のような生成設定を実行時に調整できます:
+SpeakGPT は実行時に以下の生成パラメータを調整できます:
 
 - `temperature`
 - `topP`
@@ -266,15 +281,15 @@ SpeakGPT は、以下のような生成設定を実行時に調整できます:
 
 ### ローカルデータとセキュリティ
 
-- 会話はローカルに保存され、インポート/エクスポートできます。
-- API キーなどの機密値は暗号化された Preferences で扱われます。
+- 会話はローカル保存され、インポート/エクスポートできます。
+- API キーなどの機密情報は暗号化された preference で扱われます。
 
 ### 補足と前提
 
-- このリポジトリには `google-services.json` が含まれています。fork 時に削除した場合は、一部連携で独自設定が必要になる場合があります。
-- プロバイダー互換性は、エンドポイント実装やモデルファミリーにより異なる場合があります。
+- このリポジトリには `google-services.json` が含まれます。フォーク時に削除すると、いくつかの連携で独自設定が必要になる場合があります。
+- プロバイダー互換性は、エンドポイント実装とモデルファミリーで差が出る場合があります。
 
-## 使用例
+## 利用例
 
 ### 例 1: リリース APK をビルド
 
@@ -282,63 +297,63 @@ SpeakGPT は、以下のような生成設定を実行時に調整できます:
 ./gradlew assembleRelease
 ```
 
-### 例 2: クリーンリビルド
+### 例 2: クリーンビルド
 
 ```bash
 ./gradlew clean assembleDebug
 ```
 
-### 例 3: Gemini 系モデルに OpenRouter を使用
+### 例 3: OpenRouter で Gemini 系モデルを利用
 
 1. OpenRouter API キーを作成します。
-2. SpeakGPT の設定で OpenRouter エンドポイントを選択/追加します。
+2. SpeakGPT の設定で OpenRouter エンドポイントを選択または追加します。
 3. Gemini 対応の OpenRouter モデルを選択します。
-4. チャットを開始し、応答が生成されることを確認します。
+4. チャットを開始し、応答生成を確認します。
 
 ## 開発メモ
 
-- これはマルチモジュール Android プロジェクトです（`:app`, `:teslasoft-id`）。
+- これは Android のマルチモジュールプロジェクトです（`:app`、`:teslasoft-id`）。
 - 現在の設定では、`debug` と `release` の両ビルドタイプで `minifyEnabled true` と `shrinkResources true` が有効です。
-- ProGuard/R8 ルールの場所:
+- ProGuard/R8 設定は次にあります:
   - `app/proguard-rules.pro`
   - `teslasoft-id/proguard-rules.pro`
-- 同梱 Web ドキュメントの場所:
+- 組み込み Web ドキュメント:
   - `app/src/main/assets/www/api.html`
   - `app/src/main/assets/www/api_light.html`
   - `app/src/main/assets/www/privacy.html`
   - `app/src/main/assets/www/privacy_light.html`
 - ローカライズリソースは `app/src/main/res/values-*` にあります。
-- README の i18n 出力ディレクトリは `i18n/` にあります（言語別 README はパイプライン手順で個別生成されます）。
+- README i18n 出力ディレクトリは `i18n/`（言語別の README はこのパイプライン手順で別々に生成）
 
 ## トラブルシューティング
 
-| 問題 | 確認ポイント |
+| Issue | What to check |
 |---|---|
-| "Incorrect API key" などの認証失敗 | 選択中プロバイダーでキーが有効か、選択モデルがアカウントで利用可能か、フラッグシップモデルに追加認証が必要かを確認してください。 |
-| エンドポイント/モデル不一致 | カスタムプロバイダーを使う場合は OpenAI 互換の request/response 形式を満たしているか確認してください。設定でエンドポイントプリセットを切り替えて再テストしてください。 |
-| ビルド問題 | JDK 21 が有効か確認し、Android Studio で Gradle を同期し、`./gradlew --version` で wrapper が Gradle `8.13` を使っていることを確認後、`./gradlew clean build` を再実行してください。 |
-| 古い Android での実行問題 | 現在のサポートは `minSdk 28`（Android 9）です。SDK/セキュリティ変更により、将来 Android 9/10/11 のサポートが終了する可能性がある旨の警告があります。 |
+| "Incorrect API key" や認証失敗 | 選択したプロバイダーでキーが有効か、選択したモデルがアカウントで利用可能か、プレミアムモデルには追加認証が必要か確認します。 |
+| エンドポイント/モデル不一致 | 独自プロバイダーを使う場合、OpenAI 互換の request/response 形式か確認してください。設定でエンドポイントプリセットを切り替えて再テストします。 |
+| ビルド問題 | JDK 21 を有効にし、Android Studio で Gradle を同期し、`./gradlew --version` で wrapper が Gradle `8.13` か確認後、`./gradlew clean build` で再実行します。 |
+| 古い Android での実行問題 | 現在は `minSdk 28`（Android 9）をサポートしています。SDK とセキュリティ変更により、将来 Android 9/10/11 のサポートが終了する可能性があります。 |
 
 ## ロードマップ
 
-### ❌ 追加予定（アイデアは Issues へ）
+### ❌ 追加予定（Issue でアイデア募集）
 
 - [ ] デバイスルーチン（アラーム設定やアプリ起動など）
-- [ ] チャット履歴の同期
-- [ ] プロンプトストアのようなモデル交換ポータルの追加
-- [ ] 公式ブラウジング機能（GPT 系モデルがインターネットにアクセス）
+- [ ] チャット履歴同期
+- [ ] プロンプトストアのようなモデル交換ポータル
+- [ ] 公式ブラウジング機能（GPT 系モデルにインターネットアクセスを許可）
 
 ## API キーの安全性
 
-SpeakGPT は、より良い体験を提供するために OpenAI API を使用します。API キー利用はユーザー名/パスワード利用より安全です。API キーだけで個人情報を取得されることはありません。OpenAI は自社サービスへの安価な API アクセスを提供しています。あなたの API キーは端末内にローカル保存され、他者と共有されません。SpeakGPT は個人データを収集しません。SpeakGPT はオープンソースであり、コードを自分で確認できます。SpeakGPT の各リリースは VirusTotal でチェックされています。
-懸念がある場合は、[API キーを revoke](https://platform.openai.com/account/api-keys) するか、SpeakGPT 専用の別キーを使ってください。
+SpeakGPT は最良の体験を提供するために OpenAI API を利用しています。API キーの利用はユーザー名とパスワードより安全です。API キーだけで個人情報を取得することはできません。OpenAI は自社サービスへの安価な API アクセスを提供しています。API キーはデバイス内にローカル保存され、第三者と共有されません。SpeakGPT は個人情報を収集しません。SpeakGPT はオープンソースで、コードを自分で確認できます。SpeakGPT の各リリースは VirusTotal でチェックされています。
+懸念がある場合は、[API キーを取り消し](https://platform.openai.com/account/api-keys) するか、SpeakGPT 用の別キーを使用してください。
 
-API キーを保護するには、次の手順を実施してください:
+API キーを保護する手順:
 
-1. SpeakGPT 用に別の API キーを用意する。
-2. 課金上限を設定する。
-3. 利用状況のモニタリングを有効にし、SpeakGPT のリソース使用量とコストを確認する。
-4. 不安がある場合は API キーを revoke する。
+1. SpeakGPT 専用のキーを用意します。
+2. 課金上限を設定します。
+3. 利用状況監視を有効にして、SpeakGPT が使用するリソースとコストを確認します。
+4. 不安があれば API キーを取り消します。
 
 > Why we obfuscate our code in production releases?
 >
@@ -346,11 +361,11 @@ API キーを保護するには、次の手順を実施してください:
 
 > [!CAUTION]
 >
-> マルウェアに注意してください。SpeakGPT を自分でビルド・改変することは可能ですが、第三者が配布するビルドをインストールする場合は十分に注意してください。そのようなビルドにはマルウェアが含まれる可能性があります。公式ビルドにはマルウェアは含まれておらず、VirusTotal の 60 以上の異なるアンチウイルスでチェックされています。各リリースページで VirusTotal レポートを確認し、バイナリファイルのハッシュを比較できます。
+> マルウェアに注意してください。SpeakGPT は自分でビルド・改変できますが、他者が配布するビルドをインストールする際は特に注意してください。そうしたビルドにはマルウェアが含まれている可能性があります。公式ビルドにはマルウェアは含まれておらず、VirusTotal の 60 以上の異なるアンチウイルスで検査されています。各リリースページで VirusTotal レポートを確認し、バイナリのハッシュを比較できます。
 
 ## 開発者情報
 
-| 項目 | 値 |
+| Field | Value |
 |---|---|
 | Developer name | Dmytro Ostapenko (AndraxDev) |
 | Contact | dostapenko82@gmail.com, +421951829517 |
@@ -359,25 +374,29 @@ API キーを保護するには、次の手順を実施してください:
 | Commercial activity license | OU-KE-OZP1-2023/031005-2 (Issued on 14 June 2023 according to the § 10 section 1 letter a) of the Act No. 455/1991 Coll. on Trade Licensing (Trade Licensing Act) as amended) |
 | VAT ID | SK3121636045 |
 
-（プロジェクトを金銭的に支援する場合、または将来有料機能が追加された場合に、送金先を明確にするための情報です）
+（必要に応じて、プロジェクト支援時の送金先を明確にするために使用されます。）
 
 ## コントリビュート
 
-コントリビュート歓迎です。
+コントリビューションを歓迎します。
 
-- 再現手順を添えて Issues でバグ報告してください。
-- 新機能を提案してください（明確な issue タグ/ラベルの利用をお願いします）。
-- コードを提出する場合は変更範囲を絞り、理由を含めてください。
+- バグは再現手順を添えて Issues で報告してください。
+- 新機能の要望（分かりやすい issue タグ/ラベルを使ってください）。
+- コードを提出する場合、変更範囲を絞り、意図を明記してください。
 
-## サポート
+## ❤️ Support
 
-### ご協力いただけること
+| Donate | PayPal | Stripe |
+|---|---|---|
+| [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=ko-fi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
 
-- バグ報告
-- 応援していただけると助かります :)
-- 新機能のリクエスト（issue にタグ付けを忘れずに）
+### You are appreciated to
 
-## Buy me a coffee
+- バグの報告
+- サポートしていただけると嬉しいです :)
+- 新機能の要望。issue にはタグを付けるのを忘れずに
+
+### Buy me a coffee
 
 <a href="https://buymeacoffee.com/andrax_dev"><img src="https://andrax.dev/bmc_qr.png" width="200"/></a>
 
@@ -385,7 +404,7 @@ API キーを保護するには、次の手順を実施してください:
 
 ## ライセンス
 
-このプロジェクトは Apache License 2.0 の下でライセンスされています。詳細は [LICENSE.md](LICENSE.md) を参照してください。
+This project is licensed under Apache License 2.0. See [LICENSE.md](LICENSE.md).
 
 ```text
 Copyright (c) 2023-2025 Dmytro Ostapenko. All rights reserved.

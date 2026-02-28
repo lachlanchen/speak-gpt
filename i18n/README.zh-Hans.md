@@ -1,38 +1,44 @@
 [English](../README.md) · [العربية](README.ar.md) · [Español](README.es.md) · [Français](README.fr.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Tiếng Việt](README.vi.md) · [中文 (简体)](README.zh-Hans.md) · [中文（繁體）](README.zh-Hant.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
 
+[![LazyingArt banner](https://github.com/lachlanchen/lachlanchen/raw/main/figs/banner.png)](https://github.com/lachlanchen/lachlanchen/blob/main/figs/banner.png)
+
 # SpeakGPT
 
-![Platform](https://img.shields.io/badge/platform-Android-brightgreen)
-![Min SDK](https://img.shields.io/badge/minSdk-28-blue)
-![Target SDK](https://img.shields.io/badge/targetSdk-36-blue)
-![License](https://img.shields.io/badge/license-Apache--2.0-orange)
-![Gradle](https://img.shields.io/badge/gradle-8.13-02303A?logo=gradle&logoColor=white)
-![Kotlin](https://img.shields.io/badge/kotlin-2.2.10-7F52FF?logo=kotlin&logoColor=white)
-![AGP](https://img.shields.io/badge/AGP-8.12.2-3DDC84?logo=android&logoColor=white)
+> Android-first、开源 AI 助手，内置聊天、语音、视觉与图像生成功能。
 
-<img src="https://assistant.teslasoft.org/SPEAKGPT_BANNER_ANDROID.png" style="width: 100%;"/>
+[![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=flat-square&logo=android&logoColor=white)](#quick-facts)
+[![Min SDK](https://img.shields.io/badge/minSdk-28-2563EB?style=flat-square)](#prerequisites)
+[![Target SDK](https://img.shields.io/badge/targetSdk-36-2563EB?style=flat-square)](#prerequisites)
+[![License](https://img.shields.io/badge/License-Apache%202.0-F59E0B?style=flat-square)](#license)
+[![Gradle](https://img.shields.io/badge/Gradle-8.13-02303A?style=flat-square&logo=gradle&logoColor=white)](#prerequisites)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.2.10-7F52FF?style=flat-square&logo=kotlin&logoColor=white)](#prerequisites)
+[![AGP](https://img.shields.io/badge/AGP-8.12.2-34A853?style=flat-square&logo=android&logoColor=white)](#prerequisites)
+[![Google Play](https://img.shields.io/badge/Google%20Play-Install-0F9D58?style=flat-square&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=org.teslasoft.assistant)
+[![Web Companion](https://img.shields.io/badge/Web-assistant.teslasoft.org-0EA5E9?style=flat-square&logo=googlechrome&logoColor=white)](https://assistant.teslasoft.org/)
 
-SpeakGPT 是一款面向 Android 的高级、直观且开源的 AI 助手。它将现代大语言模型（LLM）提供商与多模态工作流（聊天、语音、图像生成、视觉）整合到同一个移动应用中。
+SpeakGPT 是一款高级且非常直观的 Android 开源 AI 助手。它将现代大型语言模型（LLM）供应商与多模态工作流（聊天、语音、图像生成、视觉）整合到一个移动应用中。
 
-官方支持 GPT 模型、LLAMA、MIXTRAL、GEMMA、Gemini（普通版与 Pro）Vision、DALL-E 及其他模型。
+官方支持 GPT、LLAMA、MIXTRAL、GEMMA、Gemini（常规版和 Pro）、DALL-E 等模型。
+
+## 快速信息
 
 | 快速信息 | 详情 |
 |---|---|
-| 📱 平台 | Android（`minSdk 28`, `targetSdk 36`） |
-| 🧠 核心使用方式 | 自带端点 + 自带 API Key |
-| 🧩 应用类型 | 开源 AI 客户端（不是 API 提供商） |
-| 🌐 Web 版本 | [assistant.teslasoft.org](https://assistant.teslasoft.org/) |
+| 📱 平台 | Android（`minSdk 28`、`targetSdk 36`） |
+| 🧠 核心用法 | 自带端点 + 自带密钥 |
+| 🧩 应用类型 | 开源 AI 客户端（非 API 提供方） |
+| 🌐 Web 配套应用 | [assistant.teslasoft.org](https://assistant.teslasoft.org/) |
 
 > [!NOTE]
 >
-> 该项目是我本科毕业论文的一部分。使用本作品需署名。Copyright (c) 2023-2025 Dmytro Ostapenko. All rights reserved.
+> 本项目是我本科论文的一部分。使用本作品需注明出处。Copyright (c) 2023-2025 Dmytro Ostapenko. All rights reserved.
 >
-> 引用格式：Dmytro Ostapenko (2024), "Review Program Automation Using Copilot Services" Bachelor Thesis, Technical University of Košice, 2024.
+> 引用方式：Dmytro Ostapenko (2024), "Review Program Automation Using Copilot Services" Bachelor Thesis, Technical University of Košice, 2024.
 
 > [!CAUTION]
 >
-> 我们即将停止对以下 Android 版本的支持：9、10、11。这与近期 SDK 和安全策略变化有关。较旧的 Android 版本使用了已弃用且不稳定的特性，例如 RenderScript。
+> 我们即将停止支持以下 Android 版本：9、10、11。原因是近期 SDK 与安全策略变更。旧版 Android 使用了已弃用且不稳定的功能，例如 RenderScript。
 
 ## 目录
 
@@ -40,29 +46,28 @@ SpeakGPT 是一款面向 Android 的高级、直观且开源的 AI 助手。它�
 - [SpeakGPT Web](#speakgpt-web)
 - [概览](#概览)
 - [截图](#截图)
-- [给想在本应用中使用 Google Gemini 模型的用户的信息](#给想在本应用中使用-google-gemini-模型的用户的信息)
-- [给那些想少付出或不付出就免费使用某些东西的人](#给那些想少付出或不付出就免费使用某些东西的人)
-- [支持的 API 提供商](#支持的-api-提供商)
+- [想在本应用使用 Google Gemini 模型的说明](#想在本应用使用-google-gemini-模型的说明)
+- [希望低成本、低门槛免费试用的人](#希望低成本低门槛免费试用的人)
+- [支持的 API 提供方](#支持的-api-提供方)
 - [基础功能](#基础功能)
 - [项目结构](#项目结构)
-- [前置条件](#前置条件)
+- [先决条件](#先决条件)
 - [安装](#安装)
-- [使用](#使用)
+- [使用方法](#使用方法)
 - [配置](#配置)
 - [示例](#示例)
 - [开发说明](#开发说明)
 - [故障排查](#故障排查)
 - [路线图](#路线图)
-- [API Key 安全](#api-key-安全)
-- [开发者身份信息](#开发者身份信息)
+- [API 密钥安全](#api-密钥安全)
+- [开发者身份](#开发者身份)
 - [贡献](#贡献)
-- [支持](#支持)
-- [请我喝杯咖啡](#请我喝杯咖啡)
+- [❤️ Support](#-support)
 - [许可证](#许可证)
 
 ## 下载
 
-📦 从 Google Play 安装：
+📦 通过 Google Play 安装：
 
 <a href="https://play.google.com/store/apps/details?id=org.teslasoft.assistant"><img src="play.webp" alt="Get it on Play" width="200"/></a>
 
@@ -74,14 +79,23 @@ GitHub 仓库：[https://github.com/AndraxDev/speak-gpt-web](https://github.com/
 
 ## 概览
 
-SpeakGPT 是一个 Android 优先的 AI API 客户端。它围绕“自带端点”和“自带密钥”设计，用户可自行选择提供商、模型，以及成本/性能配置。
+SpeakGPT 是一个以 Android 为优先的 AI API 客户端。它采用「自带端点 + 自带密钥」模型，用户可以自行选择服务商、模型以及成本/性能配置。
+
+### 一览
+
+| 范畴 | 概述 |
+|---|---|
+| 💬 核心体验 | 聊天、图像生成、图像识别、语音输入、助手集成 |
+| 🔌 提供方策略 | OpenAI 兼容端点，可配置供应商与自定义端点 |
+| 🔐 数据处理 | API 密钥本地存储；聊天支持导入/导出 |
+| 🧱 技术栈 | 使用 AGP `8.12.2`、Gradle `8.13`、Kotlin `2.2.10` 的 Android 多模块项目 |
 
 仓库架构：
 
 - `app`：Android 应用模块（`org.teslasoft.assistant`）
-- `teslasoft-id`：用于认证/客户端工具的内部 Android 库模块（`org.teslasoft.core.auth`）
-- 仓库根目录的 JSON 元数据（`ai_sets.json`、`explore.json`、`experiment.json`），用于模型集合、发现与导入/导出类工作流
-- `i18n/`：多语言 README 输出目录（仓库中已存在）
+- `teslasoft-id`：用于鉴权/客户端工具的内部 Android 库模块（`org.teslasoft.core.auth`）
+- 仓库根目录下的 JSON 元数据文件（`ai_sets.json`、`explore.json`、`experiment.json`）用于模型集合、发现流程以及导入/导出风格的工作流
+- `i18n/`：仓库中的多语言 README 输出目录
 
 ## 截图
 
@@ -96,60 +110,61 @@ SpeakGPT 是一个 Android 优先的 AI API 客户端。它围绕“自带端点
 	<img src="https://gpt.teslasoft.org/s/6.png" width="200"/>
 </div>
 
-## 给想在本应用中使用 Google Gemini 模型的用户的信息
+## 想在本应用使用 Google Gemini 模型的说明
 
-SpeakGPT 本身不支持 Google API Key，但你仍可以通过 OpenRouter API 使用 Google Gemini。
+SpeakGPT 本身不直接支持 Google API Key，但你仍可通过 OpenRouter API 使用 Google Gemini。
 
 更多信息：[OpenRouter Models](https://openrouter.ai/docs#models)
 
-## 给那些想少付出或不付出就免费使用某些东西的人
+## 希望低成本低门槛免费试用的人
 
 > [!WARNING]
 >
-> 请记住，免费的奶酪只会出现在捕鼠夹里。THIS APP IS OPEN-SOURCE CLIENT PROVIDED AS IS. ITSELF IT DOES NOT PROVIDE COMPLETELY FREE ACCESS TO THE PREMIUM FEATURES OF API PROVIDERS (LIKE FLAGSHIP AI MODELS AND SPECIAL FEATURES). IF YOU COME HERE TO USE OTHER'S WORK FOR FREE AND WITHOUT A CREDIT, IT'S BETTER YOU SKIP THIS APP AND LOOK FOR SOMETHING ELSE. I WILL NOT RESPOND TO YOUR "INCORRECT API KEY, WHY THIS APP REDIRECTS ME TO THE EXTERNAL SITE FOR API KEY?" QUESTIONS. THANK YOU FOR UNDERSTANDING.
-> 所有其他理性用户都欢迎使用。
+> 记住，免费的奶酪很可能在捕鼠器里。该应用是按“原样”提供的开源客户端。它本身不提供 API 提供方的高级功能（例如旗舰 AI 模型和特殊能力）的完全免费访问。
+> 如果你来这里只想白嫖他人的工作而不付费，建议直接跳过本应用并寻找其他选择。对于“API key 错误，为什么这个应用重定向我到外部网站获取 API key？”这类问题，我不会回答。感谢理解。
+> 其他正常使用的朋友，欢迎。
 
-## 支持的 API 提供商
+## 支持的 API 提供方
 
-| Provider | Support level | Notes |
+| 提供方 | 支持级别 | 说明 |
 |---|---|---|
-| OpenAI | Full support | Primary integration path |
-| GROQ | Partial support | Some features may vary |
-| Azure | Partial support | Endpoint/model specifics may differ |
-| OpenRouter | Text generation only | Tested with Gemini, Claude, Perplexity, Llama, Gemma, Mistral, OpenAI models |
-| Other | Community-tested | Feedback is welcome |
+| OpenAI | 完整支持 | 主要集成路径 |
+| GROQ | 部分支持 | 部分功能可能有差异 |
+| Azure | 部分支持 | 端点/模型细节可能不同 |
+| OpenRouter | 仅文本生成 | 已使用 Gemini、Claude、Perplexity、Llama、Gemma、Mistral、OpenAI 模型测试 |
+| 其他 | 社区测试 | 欢迎反馈 |
 
 > [!NOTE]
 >
-> 如需切换 API 提供商，请进入设置并选择 API endpoint。你也可以添加自定义 API 提供商。
+> 要更改 API 提供方，请前往设置并选择 API 端点。你也可以添加自定义的 API 提供方。
 
 ## 基础功能
 
-✅ 已实现能力：
+✅ 已实现的能力：
 
-- [x] Chat（本地保存，可按需导入/导出）
+- [x] 聊天（本地保存，可按需导入/导出）
 - [x] 图像生成
-- [x] 图像识别（可将你的图片和照片与 ChatGPT 配合使用）
-- [x] Activation prompt
-- [x] System message
-- [x] 语音输入（Whisper 和 Google）
-- [x] Assistant
-- [x] 在上下文菜单中使用 SpeakGPT
-- [x] 在分享面板中使用 SpeakGPT
+- [x] 图像识别（可将图片和照片与 ChatGPT 一起使用）
+- [x] 激活提示词
+- [x] 系统消息
+- [x] 语音输入（Whisper 与 Google）
+- [x] 助手
+- [x] 上下文菜单中的 SpeakGPT
+- [x] 分享表单中的 SpeakGPT
 - [x] Function calling 功能
-- [x] Prompts Library
-- [x] 不同聊天布局
+- [x] 提示词库
+- [x] 多种聊天布局
 - [x] 自适应设计
 - [x] 大量不同模型
 - [x] 无验证码
-- [x] 按量付费体系
+- [x] 按量计费系统
 - [x] 新手提示
 - [x] 支持自定义微调模型
-- [x] AMOLED 深色模式
-- [x] 支持自定义 API 提供商
-- [x] 可自定义 `temperature`、`topP`、`frequencyPenalty`、`presencePenalty` 和 `logit_bias` 等模型参数
-- [x] Playground
-- [x] 可访问 o1、o3、o4、gpt-4.1、gpt-4.5 和 gpt-image-1 等最新旗舰模型（其中部分模型可能要求你在 OpenAI 完成身份验证）
+- [x] AMOLED 黑暗模式
+- [x] 自定义 API 提供方支持
+- [x] 自定义模型参数，如 `temperature`、`topP`、`frequencyPenalty`、`presencePenalty` 和 `logit_bias`
+- [x] PlayGround
+- [x] 可访问最新旗舰模型（如 o1、o3、o4、gpt-4.1、gpt-4.5 和 gpt-image-1；部分模型可能需要你在 OpenAI 完成身份验证）
 
 ## 项目结构
 
@@ -183,24 +198,24 @@ speak-gpt/
 └── i18n/
 ```
 
-## 前置条件
+## 先决条件
 
 - Android Studio（建议使用当前稳定版）
-- 安装了 `compileSdk 36` 的 Android SDK
-- JDK 21（项目 source/target 兼容 Java 21）
+- Android SDK（含 `compileSdk 36`）
+- JDK 21（项目 source/target 兼容性为 Java 21）
 - Git
-- 用于依赖解析和模型提供商 API 的网络访问
+- 依赖解析和模型供应商 API 访问需要网络
 
-来自仓库配置的构建系统信息：
+仓库配置中的构建信息：
 
 | 组件 | 版本 / 值 |
 |---|---|
 | Android Gradle Plugin | `8.12.2` |
-| Kotlin plugin | `2.2.10` |
+| Kotlin 插件 | `2.2.10` |
 | Gradle wrapper | `8.13` |
-| App package id | `org.teslasoft.assistant` |
-| Min SDK | `28` |
-| Target SDK | `36` |
+| 应用包名 | `org.teslasoft.assistant` |
+| 最低 SDK | `28` |
+| 目标 SDK | `36` |
 
 ## 安装
 
@@ -211,7 +226,7 @@ git clone https://github.com/AndraxDev/speak-gpt.git
 cd speak-gpt
 ```
 
-### 2. 构建 debug APK
+### 2. 构建调试 APK
 
 ```bash
 ./gradlew assembleDebug
@@ -223,40 +238,40 @@ cd speak-gpt
 ./gradlew installDebug
 ```
 
-### 4. 可选质量检查
+### 4. 可选的质量检查
 
 ```bash
 ./gradlew lint
 ```
 
-## 使用
+## 使用方法
 
 ### 终端用户流程（应用内）
 
-1. 从 Google Play 或本地 debug 构建安装应用。
+1. 从 Google Play 或本地调试构建安装应用。
 2. 完成引导流程。
-3. 打开 API 设置并选择或添加你的端点/提供商。
-4. 输入 API key（本地存储在你的设备上）。
-5. 选择模型并开始聊天、视觉、图像生成或语音工作流。
+3. 打开 API 设置并选择或添加你的端点/供应商。
+4. 输入 API Key（本地保存在你的设备）。
+5. 选择模型并开始聊天、视觉、图像生成或语音流程。
 
 ### 可用的 Android 集成
 
-- Assistant 集成（`ASSIST` intent）
-- Share sheet 集成（`SEND` 和 `SEND_MULTIPLE` intents）
-- Process text 集成（`PROCESS_TEXT`）
-- `assistant.teslasoft.org` 的深链接（`/chat`、`/prompts`、`/assistant`）
+- 助手集成（`ASSIST` intent）
+- 分享面板集成（`SEND` 与 `SEND_MULTIPLE` intents）
+- 文本处理集成（`PROCESS_TEXT`）
+- `assistant.teslasoft.org` 深链接（`/chat`、`/prompts`、`/assistant`）
 
 ## 配置
 
-### API endpoints 与 providers
+### API 端点与供应方
 
-- 在应用中打开 **Settings**。
-- 选择 **API endpoint** 在预配置提供商之间切换。
-- 如果你的提供商与 OpenAI 兼容，可添加自定义 endpoint。
+- 在应用中打开 **设置**。
+- 选择 **API endpoint** 以切换预配置的供应方。
+- 如果你的供应方兼容 OpenAI，可添加自定义端点。
 
 ### 模型与生成参数
 
-SpeakGPT 支持在运行时调整以下生成设置：
+SpeakGPT 支持在运行时调整以下生成参数：
 
 - `temperature`
 - `topP`
@@ -266,13 +281,13 @@ SpeakGPT 支持在运行时调整以下生成设置：
 
 ### 本地数据与安全
 
-- 对话会存储在本地，并可导入/导出。
-- API key 等敏感值通过加密偏好设置进行处理。
+- 会话记录保存在本地，可导入/导出。
+- 像 API key 这类敏感值会存储于加密偏好。
 
 ### 说明与假设
 
-- 本仓库包含 `google-services.json`；如果你 fork 后移除该文件，某些集成功能可能需要你自行配置。
-- 不同 endpoint 实现和模型系列的提供商兼容性可能不同。
+- 仓库中包含 `google-services.json`；如果你 Fork 并移除了它，部分集成功能可能需要你自行配置。
+- 供应方兼容性可能因端点实现和模型家族而异。
 
 ## 示例
 
@@ -282,102 +297,105 @@ SpeakGPT 支持在运行时调整以下生成设置：
 ./gradlew assembleRelease
 ```
 
-### 示例 2：清理后重新构建
+### 示例 2：清理并重建
 
 ```bash
 ./gradlew clean assembleDebug
 ```
 
-### 示例 3：使用 OpenRouter 运行 Gemini 系列模型
+### 示例 3：通过 OpenRouter 使用 Gemini 系列模型
 
-1. 创建 OpenRouter API key。
-2. 在 SpeakGPT 设置中选择/添加 OpenRouter endpoint。
+1. 创建 OpenRouter API Key。
+2. 在 SpeakGPT 设置中选择/添加 OpenRouter 端点。
 3. 选择支持 Gemini 的 OpenRouter 模型。
-4. 开始聊天并验证响应生成。
+4. 开始对话并验证响应是否正常。
 
 ## 开发说明
 
 - 这是一个多模块 Android 项目（`:app`、`:teslasoft-id`）。
-- 在当前配置中，`debug` 与 `release` 构建类型都启用了 `minifyEnabled true` 和 `shrinkResources true`。
+- 当前配置中，`debug` 与 `release` 构建类型都启用了 `minifyEnabled true` 和 `shrinkResources true`。
 - ProGuard/R8 规则位于：
   - `app/proguard-rules.pro`
   - `teslasoft-id/proguard-rules.pro`
-- 内置网页文档位于：
+- 嵌入式网页文档位于：
   - `app/src/main/assets/www/api.html`
   - `app/src/main/assets/www/api_light.html`
   - `app/src/main/assets/www/privacy.html`
   - `app/src/main/assets/www/privacy_light.html`
 - 本地化资源位于 `app/src/main/res/values-*`。
-- README i18n 输出目录为 `i18n/`（各语言 README 文件在流水线步骤中单独生成）。
+- README i18n 输出目录位于 `i18n/`（各语言 README 文件由流水线步骤分别生成）。
 
 ## 故障排查
 
-| 问题 | 检查项 |
+| 问题 | 排查项 |
 |---|---|
-| “Incorrect API key” 或鉴权失败 | 确认你的 key 对所选提供商有效，确认所选模型对你的账号可用，并检查该提供商是否要求对旗舰模型进行额外验证。 |
-| Endpoint/model 不匹配 | 若使用自定义 provider endpoint，请确保请求/响应格式与 OpenAI 兼容。尝试在设置中切换 endpoint 预设后重试。 |
-| 构建问题 | 确认已启用 JDK 21，在 Android Studio 中同步 Gradle 项目，运行 `./gradlew --version` 并确认 wrapper 使用 Gradle `8.13`，然后重试 `./gradlew clean build`。 |
-| 旧版 Android 上的运行时问题 | 项目当前支持 `minSdk 28`（Android 9）。项目提示由于 SDK/安全变化，未来可能会停止支持 Android 9/10/11。 |
+| “API key 错误”或鉴权失败 | 确认你的密钥对所选供应方有效，确认你所选模型对账户可用，并检查该供应方是否对旗舰模型有额外验证要求。 |
+| 端点/模型不匹配 | 若使用自定义供应方端点，请确保兼容 OpenAI 的请求/响应格式。可尝试在设置中切换端点预设并重新测试。 |
+| 构建问题 | 确认使用 JDK 21，先在 Android Studio 同步 Gradle 工程，执行 `./gradlew --version` 并确认 wrapper 使用的是 Gradle `8.13`，然后重试 `./gradlew clean build`。 |
+| 旧版 Android 运行问题 | 项目当前支持 `minSdk 28`（Android 9）。项目说明未来可能因 SDK / 安全变更而移除 Android 9/10/11 支持。 |
 
 ## 路线图
 
-### ❌ 计划添加（欢迎在 Issues 分享想法）
+### ❌ 计划新增（欢迎在 Issue 中提出你的想法）
 
 - [ ] 设备例程（如设置闹钟或打开应用）
-- [ ] 同步聊天记录
-- [ ] 增加类似 prompts 商店的模型交换门户
-- [ ] 官方浏览能力（让 GPT AI 模型可访问互联网）
+- [ ] 聊天历史同步
+- [ ] 添加类似提示词商店的模型交流入口
+- [ ] 官方联网能力（让 GPT 类模型可访问互联网）
 
-## API Key 安全
+## API 密钥安全
 
-SpeakGPT 使用 OpenAI API 为你提供最佳体验。使用 API key 比使用用户名/密码更安全。你的个人信息无法通过 API key 获取。OpenAI 以较低成本提供其服务的 API 访问。你的 API key 仅存储在本地设备上，不会与任何人共享。SpeakGPT 不收集任何个人数据。SpeakGPT 是开源项目，你可以自行检查代码。SpeakGPT 的每个版本都会在 VirusTotal 上进行检测。
-如果你有任何担忧，可以选择[吊销 API key](https://platform.openai.com/account/api-keys)，或为 SpeakGPT 单独使用一把 API key。
+SpeakGPT 使用 OpenAI API 为你提供最佳体验。与账号密码相比，使用 API key 更安全。个人信息无法通过 API key 获取。OpenAI 提供了低价的 API 访问。你的 API key 本地保存在设备上，不会共享给任何人。SpeakGPT 不会收集任何个人数据。该应用开源，你可自行查看代码。每个发布版本都会在 VirusTotal 上检查。
+如果你有任何担忧，可以选择 [撤销你的 API key](https://platform.openai.com/account/api-keys) 或为 SpeakGPT 使用独立密钥。
 
-为保护你的 API key，请执行以下步骤：
+要安全管理你的 API key，请按以下步骤操作：
 
-1. 确保为 SpeakGPT 使用独立的 API key。
-2. 设置账单上限。
-3. 开启用量监控，以便查看 SpeakGPT 消耗了多少资源及对应成本。
-4. 如有任何担忧，可吊销 API key。
+1. 为 SpeakGPT 准备独立的 API key。
+2. 设置计费上限。
+3. 启用用量监控，以便查看 SpeakGPT 的资源使用量和花费。
+4. 若仍有担忧，可撤销你的 API key。
 
-> 为什么我们会在生产版本中进行代码混淆？
+> 为什么我们在正式版本中混淆代码？
 >
-> 混淆和资源压缩可以帮助我们优化应用体积与性能，并提高其抗逆向和防篡改能力，确保你的 API key 等凭证处于更安全的状态。你可以申请未混淆构建，或自行编译以确认应用安全性。
+> 混淆与资源裁剪可优化应用体积与性能，并增强逆向工程和篡改防护，确保你的 API key 等凭据安全。你可以要求提供未混淆构建，或自行编译以验证安全性。
 
 > [!CAUTION]
 >
-> 小心恶意软件！你可以自行编译并修改 SpeakGPT，但如果他人提供构建包给你安装，请务必谨慎。此类构建可能包含恶意软件。官方构建不包含恶意软件，并且会通过 VirusTotal 上 60 多种不同杀毒引擎检测。你可以在每个发布页面找到 VirusTotal 报告，并比对二进制文件哈希值。
+> 请注意防范恶意软件！你可以自行编译和修改 SpeakGPT，但请谨慎安装他人提供的构建版本。此类构建可能包含恶意代码。官方构建不含任何恶意软件，并且每个发布页面都会通过 VirusTotal 检测，采用 60 多个杀毒引擎。你可在每个发布页面查看 VirusTotal 报告，并比对二进制文件哈希。
 
-## 开发者身份信息
+## 开发者身份
 
-| Field | Value |
+| 字段 | 数值 |
 |---|---|
-| Developer name | Dmytro Ostapenko (AndraxDev) |
-| Contact | dostapenko82@gmail.com, +421951829517 |
-| Legal address | Južná trieda 4B, 04001 Košice, Slovakia 04001 |
-| Legal entity ID | 55545386 (D-U-N-S: 933739642) |
-| Commercial activity license | OU-KE-OZP1-2023/031005-2 (Issued on 14 June 2023 according to the § 10 section 1 letter a) of the Act No. 455/1991 Coll. on Trade Licensing (Trade Licensing Act) as amended) |
-| VAT ID | SK3121636045 |
+| 开发者名称 | Dmytro Ostapenko (AndraxDev) |
+| 联系方式 | dostapenko82@gmail.com, +421951829517 |
+| 法定地址 | Južná trieda 4B, 04001 Košice, Slovakia 04001 |
+| 法人识别码 | 55545386 (D-U-N-S: 933739642) |
+| 商业活动许可 | OU-KE-OZP1-2023/031005-2（依据《商贸许可法》第455/1991号法典第10条第1款a项，于2023年6月14日签发） |
 
-（如果你决定在经济上支持本项目，或项目未来出现付费功能，你可以据此了解款项接收方信息）
+（如果你决定经济支持本项目，或未来项目出现付费功能，可从这里确认资金去向。）
 
 ## 贡献
 
-欢迎贡献。
+欢迎提交贡献。
 
-- 在 Issues 中报告 bug，并提供复现步骤。
-- 请求新功能（请使用清晰的 issue 标签）。
-- 如果你提交代码，请保持改动范围聚焦并附上改动理由。
+- 在 Issue 中提交 bug，并提供复现步骤。
+- 提出新功能请求（请使用明确的标签/标记）。
+- 如果提交代码，请保持变更范围清晰并给出说明。
 
-## 支持
+## ❤️ Support
 
-### 欢迎你
+| Donate | PayPal | Stripe |
+|---|---|---|
+| [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=ko-fi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
 
-- 报告任何 bug
+### 我希望你能帮忙
+
+- 反馈任何 bug
 - 支持我 :)
-- 请求新功能，别忘了给 issue 加标签
+- 提交新功能需求，记得给 issue 打上标签
 
-## 请我喝杯咖啡
+### 请我喝杯咖啡
 
 <a href="https://buymeacoffee.com/andrax_dev"><img src="https://andrax.dev/bmc_qr.png" width="200"/></a>
 
@@ -385,7 +403,7 @@ SpeakGPT 使用 OpenAI API 为你提供最佳体验。使用 API key 比使用�
 
 ## 许可证
 
-本项目采用 Apache License 2.0 许可证。详见 [LICENSE.md](LICENSE.md)。
+本项目使用 Apache License 2.0 授权。详见 [LICENSE.md](LICENSE.md)。
 
 ```text
 Copyright (c) 2023-2025 Dmytro Ostapenko. All rights reserved.

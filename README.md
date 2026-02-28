@@ -1,21 +1,27 @@
 [English](README.md) · [العربية](i18n/README.ar.md) · [Español](i18n/README.es.md) · [Français](i18n/README.fr.md) · [日本語](i18n/README.ja.md) · [한국어](i18n/README.ko.md) · [Tiếng Việt](i18n/README.vi.md) · [中文 (简体)](i18n/README.zh-Hans.md) · [中文（繁體）](i18n/README.zh-Hant.md) · [Deutsch](i18n/README.de.md) · [Русский](i18n/README.ru.md)
 
+
+[![LazyingArt banner](https://github.com/lachlanchen/lachlanchen/raw/main/figs/banner.png)](https://github.com/lachlanchen/lachlanchen/blob/main/figs/banner.png)
+
 # SpeakGPT
 
+> Android-first, open-source AI assistant with chat, voice, vision, and image generation workflows.
 
-![Platform](https://img.shields.io/badge/platform-Android-brightgreen)
-![Min SDK](https://img.shields.io/badge/minSdk-28-blue)
-![Target SDK](https://img.shields.io/badge/targetSdk-36-blue)
-![License](https://img.shields.io/badge/license-Apache--2.0-orange)
-![Gradle](https://img.shields.io/badge/gradle-8.13-02303A?logo=gradle&logoColor=white)
-![Kotlin](https://img.shields.io/badge/kotlin-2.2.10-7F52FF?logo=kotlin&logoColor=white)
-![AGP](https://img.shields.io/badge/AGP-8.12.2-3DDC84?logo=android&logoColor=white)
-
-<img src="https://assistant.teslasoft.org/SPEAKGPT_BANNER_ANDROID.png" style="width: 100%;"/>
+[![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=flat-square&logo=android&logoColor=white)](#quick-facts)
+[![Min SDK](https://img.shields.io/badge/minSdk-28-2563EB?style=flat-square)](#prerequisites)
+[![Target SDK](https://img.shields.io/badge/targetSdk-36-2563EB?style=flat-square)](#prerequisites)
+[![License](https://img.shields.io/badge/License-Apache%202.0-F59E0B?style=flat-square)](#license)
+[![Gradle](https://img.shields.io/badge/Gradle-8.13-02303A?style=flat-square&logo=gradle&logoColor=white)](#prerequisites)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.2.10-7F52FF?style=flat-square&logo=kotlin&logoColor=white)](#prerequisites)
+[![AGP](https://img.shields.io/badge/AGP-8.12.2-34A853?style=flat-square&logo=android&logoColor=white)](#prerequisites)
+[![Google Play](https://img.shields.io/badge/Google%20Play-Install-0F9D58?style=flat-square&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=org.teslasoft.assistant)
+[![Web Companion](https://img.shields.io/badge/Web-assistant.teslasoft.org-0EA5E9?style=flat-square&logo=googlechrome&logoColor=white)](https://assistant.teslasoft.org/)
 
 SpeakGPT is an advanced and highly intuitive open-source AI assistant for Android. It integrates modern large language model (LLM) providers and multimodal workflows (chat, voice, image generation, vision) into a single mobile app.
 
 Officially it supports GPT models, LLAMA, MIXTRAL, GEMMA, Gemini (regular and pro) Vision, DALL-E and other models.
+
+## Quick facts
 
 | Quick facts | Details |
 |---|---|
@@ -56,8 +62,7 @@ Officially it supports GPT models, LLAMA, MIXTRAL, GEMMA, Gemini (regular and pr
 - [API key safety](#api-key-safety)
 - [Developer identity](#developer-identity)
 - [Contributing](#contributing)
-- [Support](#support)
-- [Buy me a coffee](#buy-me-a-coffee)
+- [❤️ Support](#-support)
 - [License](#license)
 
 ## Download
@@ -75,6 +80,15 @@ GitHub repo: [https://github.com/AndraxDev/speak-gpt-web](https://github.com/And
 ## Overview
 
 SpeakGPT is an Android-first client for AI APIs. It is designed around bring-your-own-endpoint and bring-your-own-key usage, so users can choose provider, model, and cost/performance profile.
+
+### At a glance
+
+| Area | Summary |
+|---|---|
+| 💬 Core experiences | Chat, image generation, image recognition, voice input, assistant integrations |
+| 🔌 Provider strategy | OpenAI-compatible endpoints with configurable providers and custom endpoints |
+| 🔐 Data handling | API keys stored locally; chats can be imported/exported |
+| 🧱 Build stack | Android multi-module project using AGP `8.12.2`, Gradle `8.13`, Kotlin `2.2.10` |
 
 Repository architecture:
 
@@ -369,7 +383,11 @@ Contributions are welcome.
 - Request new features (please use clear issue tags/labels).
 - If you submit code, keep changes scoped and include rationale.
 
-## Support
+## ❤️ Support
+
+| Donate | PayPal | Stripe |
+|---|---|---|
+| [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=ko-fi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
 
 ### You are appreciated to
 
@@ -377,7 +395,7 @@ Contributions are welcome.
 - Support me :)
 - Request new features. Don't forget to mark issue with a tag
 
-## Buy me a coffee
+### Buy me a coffee
 
 <a href="https://buymeacoffee.com/andrax_dev"><img src="https://andrax.dev/bmc_qr.png" width="200"/></a>
 
